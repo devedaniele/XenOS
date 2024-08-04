@@ -33,6 +33,7 @@ apt-get update -y && apt-get dist-upgrade -y
 apt install git gh sudo -y
 
 rm .bashrc
+rm /etc/bash.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/bash.bashrc >> /etc/bash.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.bash_aliases >> .bash_aliases
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.bashrc >> .bashrc
@@ -44,6 +45,7 @@ EOF
 
 pd login debian
 
+rm $PREFIX/etc/bash.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/bash.bashrc >> $PREFIX/etc/bash.bashrc
 
 exit
