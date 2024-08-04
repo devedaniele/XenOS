@@ -20,7 +20,7 @@ cat > $XENOS/.bashrc  <<- EOF
 #!/bin/bash
 apt update && apt upgrade -y
 
-apt install gnupg -y
+apt install gnupg curl -y
 
 rm -rf /etc/apt/sources.list
 echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
@@ -30,7 +30,7 @@ mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 
 apt-get update -y && apt-get dist-upgrade -y
 
-apt install git gh sudo curl -y
+apt install git gh sudo -y
 
 rm .bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/bash.bashrc >> /etc/bash.bashrc
