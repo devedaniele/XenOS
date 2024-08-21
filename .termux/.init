@@ -30,6 +30,6 @@ xenos
 rm $PREFIX/etc/bash.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/bash.bashrc >> $PREFIX/etc/bash.bashrc
 
-apt install git clang nodejs -y
+apt install git clang make nodejs -y
 
 exit
