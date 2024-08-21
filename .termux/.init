@@ -25,7 +25,7 @@ XENOS=$PREFIX/var/lib/proot-distro/installed-rootfs/debian/root
 rm $XENOS/.bashrc 
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.init >> $XENOS/.bashrc
 
-xenos
+pd login debian
 
 rm $PREFIX/etc/bash.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/bash.bashrc >> $PREFIX/etc/bash.bashrc
