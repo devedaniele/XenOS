@@ -28,5 +28,7 @@ curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.bash_
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/bash.bashrc >> /etc/bash.bashrc
 curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.bashrc
 
+gh auth login
+
 sleep 1
 exit
