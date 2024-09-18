@@ -11,7 +11,12 @@ mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 
 apt-get update -y && apt-get dist-upgrade -y
 
-apt install git gh nodejs sudo make build-essential -y
+apt install git gh sudo make build-essential -y
+
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+rm -f packages.microsoft.gpg
 
 echo " " >> .bash_aliases
 
