@@ -1,3 +1,3 @@
 #!/usr/bin/bash
-alias xenos="pd login debian"
+alias xenos="proot-distro login xenos"
 alias update="apt update && apt upgrade -y"
