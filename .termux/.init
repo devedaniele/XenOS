@@ -8,6 +8,8 @@ apt install proot-distro termux-x11-nightly -y
 
 proot-distro install debian
 
+proot-distro clear
+
 XENOS=$PREFIX/var/lib/proot-distro/installed-rootfs/debian/root
 
 # echo " " >> $PATH/audio
