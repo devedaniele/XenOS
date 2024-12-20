@@ -2,29 +2,31 @@
 apt update && apt upgrade -y
 
 apt install x11-repo -y
-apt install proot-distro termux-x11-nightly pulseaudio -y
+apt install proot-distro termux-x11-nightly -y
+
+# apt install pulseaudio -y
 
 proot-distro install debian
 
 XENOS=$PREFIX/var/lib/proot-distro/installed-rootfs/debian/root
 
-echo " " >> $PATH/audio
+# echo " " >> $PATH/audio
 echo " " >> .bash_aliases
 echo " " >> .bashrc
 
-rm $PATH/audio
+# rm $PATH/audio
 rm .bash_aliases
 rm .bashrc
 rm $XENOS/.bashrc
 rm $PREFIX/etc/bash.bashrc
 
-curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/audio >> $PATH/audio
+# curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/audio >> $PATH/audio
 curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/.bash_aliases
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/bash.bashrc >> $PREFIX/etc/bash.bashrc
 curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/.bashrc
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.init >> $XENOS/.bashrc
 
-chmod +x $PATH/audio
+# chmod +x $PATH/audio
 
 pd login debian
 
