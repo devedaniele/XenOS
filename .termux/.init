@@ -32,6 +32,6 @@ curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.debian/.init
 
 # chmod +x $PATH/audio
 
-pd login debian
+proot-distro login xenos
 
 exit
