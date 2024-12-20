@@ -7,10 +7,11 @@ apt install proot-distro termux-x11-nightly -y
 # apt install pulseaudio -y
 
 proot-distro install debian
+proot-distro rename debian xenos
 
 proot-distro clear
 
-XENOS=$PREFIX/var/lib/proot-distro/installed-rootfs/debian/root
+XENOS=$PREFIX/var/lib/proot-distro/installed-rootfs/xenos/root
 
 # echo " " >> $PATH/audio
 echo " " >> .bash_aliases
