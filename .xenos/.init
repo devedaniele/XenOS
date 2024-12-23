@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+apt update && apt upgrade -y
+
+termux-setup-storage
+
+apt install x11-repo -y
+apt install xfce4 proot-distro termux-x11-nightly -y
+
+proot-distro install debian
+proot-distro rename debian xenos
+
+proot-distro clear
+
+XFS=$PREFIX/var/lib/proot-distro/installed-rootfs/xenos
+XENOS=$XFS/root
+
+echo " " >> .bash_aliases
+echo " " >> .bashrc
+
+rm .bash_aliases
+rm .bashrc
+rm $XENOS/.bashrc
+rm $PREFIX/etc/bash.bashrc
+
+curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.xenos/.bash_aliases
+curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.xenos/bash.bashrc >> $PREFIX/etc/bash.bashrc
+curl -LO https://raw.githubusercontent.com/devedaniele/XenOS/main/.xenos/.bashrc
+curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/xenos/.init >> $XENOS/.bashrc
+
+proot-distro login xenos
+
+exit

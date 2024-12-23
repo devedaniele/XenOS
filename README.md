@@ -8,3 +8,6 @@ to setup termux and install debian and then convert it to kali-debian or kali
 ```
 curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.termux/.init | bash
 ```
+```
+curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/.xenos/.init | bash
+```
