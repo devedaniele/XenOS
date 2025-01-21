@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-clear
+#!/data/data/com.termux/files/usr/bin/bash
 
 case $- in
     *i*) ;;
@@ -19,3 +18,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+clear

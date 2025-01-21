@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 
 case $- in
     *i*) ;;
@@ -17,3 +16,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+clear

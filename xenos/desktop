@@ -1,0 +1,12 @@
+#!/bin/bash
+
+apt update && apt upgrade -y
+
+clear
+
+apt instal xfce4 xfce4-terminal firefox-esr -y
+
+curl -sSL https://raw.githubusercontent.com/devedaniele/XenOS/main/xenos/startx11 >> /bin/startx11
+chmod +x /bin/startx11
+
+clear
